@@ -1,0 +1,23 @@
+@use '../../../assets/styles/variables.scss' as v;
+
+.SocialLink {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 10px;
+    border: 1px solid v.$DIVIDER;
+    border-radius: 100px;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 500;
+    color: v.$MAIN_FONT_COLOR;
+    transition: background 0.3s;
+
+    &:hover {
+        background-color: v.$MENU_LINK_HOVER_BG;
+    }
+
+    .icon {
+        margin-right: 6px;
+    }
+}

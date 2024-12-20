@@ -1,0 +1,97 @@
+@use '../../../assets/styles/variables.scss' as v;
+
+.Table {
+    position: relative;
+    .title {
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 700;
+        margin-bottom: 24px;
+    }
+
+    .smoothBorder {
+        position: absolute;
+        top: 40px;
+        bottom: 0;
+        width: 50px;
+        z-index: 2;
+
+        &.smoothLeft {
+            left: 0;
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0) 50.41%,
+                #ffffff 100%
+            );
+            transform: rotate(180deg);
+        }
+
+        &.smoothRight {
+            right: 0;
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0) 50.41%,
+                #ffffff 100%
+            );
+        }
+    }
+
+    .tableBody {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .info {
+        margin: 24px 0 20px 0;
+        position: sticky;
+        left: 0;
+        width: 100%;
+        z-index: 5;
+    }
+
+    .cell {
+        padding: 0 5px;
+    }
+
+    .headerCell {
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: 600;
+    }
+
+    .bodyCell {
+        .value {
+            font-size: 20px;
+            line-height: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .label {
+            font-size: 12px;
+            line-height: 12px;
+            font-weight: 500;
+            color: v.$SECONDARY_FONT_COLOR;
+        }
+    }
+
+    .row {
+        display: flex;
+        gap: 10px;
+
+        &.header {
+            padding-bottom: 16px;
+            border-bottom: 1px solid v.$DIVIDER;
+        }
+    }
+
+    .bodyRow {
+        display: flex;
+        gap: 10px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid v.$DIVIDER;
+    }
+}

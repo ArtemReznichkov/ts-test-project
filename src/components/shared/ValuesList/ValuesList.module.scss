@@ -1,0 +1,28 @@
+@use '../../../assets/styles/variables.scss' as v;
+
+.ValuesList {
+    .title {
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 700;
+        margin-bottom: 24px;
+    }
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+
+        .label {
+            font-size: 14px;
+            line-height: 14px;
+            font-weight: 500;
+        }
+
+        .value {
+            font-size: 14px;
+            line-height: 14px;
+            font-weight: 700;
+        }
+    }
+}

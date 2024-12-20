@@ -1,0 +1,49 @@
+@use '../../../assets/styles/variables.scss' as v;
+
+.Menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+    .menuItem {
+        position: relative;
+        list-style: none;
+
+        .link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: v.$SECONDARY_FONT_COLOR;
+            font-size: v.$MENU_FONT_SIZE;
+            padding: 10px 12px;
+            margin-inline: 20px;
+            transition: background-color 0.3s;
+            border-radius: 10px;
+            font-weight: 500;
+
+            &:hover {
+                background-color: v.$MENU_LINK_HOVER_BG;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 3px;
+                height: 22px;
+                width: 4px;
+                background-color: v.$MAIN_FONT_COLOR;
+                opacity: 0;
+                transition: opacity 0.3s;
+                border-radius: 3px;
+            }
+
+            &.activeLink {
+                color: v.$MAIN_FONT_COLOR;
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

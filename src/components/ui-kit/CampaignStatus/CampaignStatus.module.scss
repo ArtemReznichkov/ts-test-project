@@ -1,0 +1,30 @@
+@use '../../../assets/styles/variables.scss' as v;
+
+.CampaignStatus {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 10px;
+    border: 1px solid v.$DIVIDER;
+    border-radius: 100px;
+
+    .indicator {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        margin-right: 6px;
+
+        &.active {
+            background-color: v.$ACTIVE_COLOR;
+        }
+
+        &.rejected {
+            background-color: v.$REJECTED_COLOR;
+        }
+    }
+
+    .statusValue {
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 500;
+    }
+}

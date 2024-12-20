@@ -1,0 +1,17 @@
+.MainLayout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 15.5rem calc(100% - 15.5rem);
+    position: relative;
+
+    .content {
+        display: flex;
+        justify-content: center;
+
+        .page {
+            width: 100%;
+            max-width: 1024px;
+            padding-bottom: 40px;
+        }
+    }
+}
