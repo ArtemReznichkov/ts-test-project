@@ -6,7 +6,7 @@ import styles from './MainLayout.module.scss';
 const MainLayout: React.FC = () => {
     return (
         <div className={styles.MainLayout}>
-            <Sidebar />
+            <Sidebar className={styles.sidebar} />
             <section className={styles.content}>
                 <div className={styles.page}>
                     <Outlet />

@@ -15,12 +15,13 @@ interface ICampaignInfoBlockProps {
     className?: string;
     campaign: ICampaign;
     onToggle?: (value: boolean) => void;
+    size?: 'small' | 'normal';
 }
 
 const CampaignInfoBlock: React.FC<ICampaignInfoBlockProps> = (
     props: ICampaignInfoBlockProps
 ) => {
-    const { campaign, className, onToggle } = props;
+    const { campaign, className, onToggle, size = 'normal' } = props;
 
     return (
         <div className={classNames(styles.CampaignInfoBlock, className)}>
@@ -31,7 +32,13 @@ const CampaignInfoBlock: React.FC<ICampaignInfoBlockProps> = (
             />
             <div className={styles.info}>
                 <div className={styles.infoWrapper}>
-                    <p className={styles.name}>{campaign.name}</p>
+                    <p
+                        className={classNames(styles.name, {
+                            [styles.smallName]: size === 'small',
+                        })}
+                    >
+                        {campaign.name}
+                    </p>
                     <div className={styles.links}>
                         <CampaignStatus
                             status={campaign.status}

@@ -88,6 +88,7 @@ const Table: React.FC<ITableProps> = (props: ITableProps) => {
                                 campaign={item}
                                 className={styles.info}
                                 onToggle={onChangeStatus(i)}
+                                size="small"
                             />
                             <div className={styles.bodyRow}>
                                 {schema.map((el) => {

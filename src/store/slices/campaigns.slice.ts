@@ -24,7 +24,6 @@ export const campaignsSlice = createSlice({
             });
         },
         changeCampaignStatus: (state, { payload }) => {
-            console.log(222222, payload);
             const { campaignId, index, status } = payload;
             const currentCampaign = state.campaigns[campaignId];
             const adResult = currentCampaign.adResults[index];

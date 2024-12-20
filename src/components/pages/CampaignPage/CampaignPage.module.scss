@@ -1,6 +1,12 @@
+@import '../../../assets/styles/media-mixins.scss';
+
 .CampaignPage {
     .content {
         padding: 20px 50px;
+
+        @include _768 {
+            padding: 20px;
+        }
     }
 
     .infoBlock {

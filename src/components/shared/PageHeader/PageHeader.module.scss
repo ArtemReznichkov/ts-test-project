@@ -1,16 +1,30 @@
 @use '../../../assets/styles/variables.scss' as v;
+@import '../../../assets/styles/media-mixins.scss';
 
 .PageHeader {
-    padding: 26px 50px;
+    padding: 24px 50px;
     position: sticky;
     top: 0;
     background-color: v.$MAIN_BG;
     z-index: 10;
 
+    @include _768 {
+        padding: 16px 24px;
+    }
+
     h1 {
         font-size: 32px;
-        line-height: 32px;
+        line-height: 36px;
         font-weight: 700;
         margin: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+
+        @include _768 {
+            font-size: 26px;
+            line-height: 32px;
+        }
     }
 }
