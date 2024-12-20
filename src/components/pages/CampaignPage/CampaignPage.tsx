@@ -34,25 +34,27 @@ const CampaignPage: React.FC = () => {
 
     return (
         <div className={styles.CampaignPage}>
-            <PageHeader title={currentCampaign.name} />
-            <div className={styles.content}>
-                <CampaignInfoBlock
-                    campaign={currentCampaign}
-                    className={styles.infoBlock}
-                />
-                <ValuesList
-                    schema={resultsSchema}
-                    data={currentCampaign.results || {}}
-                    title={'Results'}
-                    className={styles.results}
-                />
-                <Table
-                    schema={adSchema}
-                    data={currentCampaign.adResults || []}
-                    title={'Individual ad results'}
-                    onChangeStatus={handleChangeStatus}
-                />
-            </div>
+            <PageHeader title={currentCampaign?.name} />
+            {currentCampaign ? (
+                <div className={styles.content}>
+                    <CampaignInfoBlock
+                        campaign={currentCampaign}
+                        className={styles.infoBlock}
+                    />
+                    <ValuesList
+                        schema={resultsSchema}
+                        data={currentCampaign.results || {}}
+                        title={'Results'}
+                        className={styles.results}
+                    />
+                    <Table
+                        schema={adSchema}
+                        data={currentCampaign.adResults || []}
+                        title={'Individual ad results'}
+                        onChangeStatus={handleChangeStatus}
+                    />
+                </div>
+            ) : null}
         </div>
     );
 };
