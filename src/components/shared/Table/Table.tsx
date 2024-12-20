@@ -28,7 +28,7 @@ const Table: React.FC<ITableProps> = (props: ITableProps) => {
     });
 
     const handleScroll = useCallback(
-        (e) => {
+        (e: any) => {
             const { clientWidth, scrollLeft, scrollWidth } = e.target;
             const isEnd = Math.ceil(clientWidth + scrollLeft) >= scrollWidth;
             const isStart = !scrollLeft;
@@ -81,7 +81,7 @@ const Table: React.FC<ITableProps> = (props: ITableProps) => {
                     })}
                 </div>
 
-                {data.map((item, i: number) => {
+                {data.map((item: any, i: number) => {
                     return (
                         <>
                             <CampaignInfoBlock

@@ -4,7 +4,7 @@ import { useActions } from './useActions';
 import { campaignsListMock } from '../mocks/campaign.mock';
 
 export const useCampaigns = (id?: number | undefined) => {
-    const state = useSelector((state) => state.campaigns);
+    const state = useSelector((state: any) => state.campaigns);
     const { getCampaignsList } = useActions();
 
     useEffect(() => {
@@ -13,6 +13,6 @@ export const useCampaigns = (id?: number | undefined) => {
 
     return {
         ...state,
-        currentCampaign: state.campaigns[id] || {},
+        currentCampaign: id ? state.campaigns[id] : {},
     };
 };
