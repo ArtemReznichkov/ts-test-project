@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 import MainLayout from './components/layouts/MainLayout';
 
@@ -12,7 +12,7 @@ import CampaignPage from './components/pages/CampaignPage';
 import { EnumRoutes } from './constants/routes';
 
 const App: React.FC = () => (
-    <BrowserRouter basename="/ts-test-project/">
+    <HashRouter>
         <Routes>
             <Route
                 path="*"
@@ -30,7 +30,7 @@ const App: React.FC = () => (
                 <Route path={EnumRoutes.CAMPAIGN} element={<CampaignPage />} />
             </Route>
         </Routes>
-    </BrowserRouter>
+    </HashRouter>
 );
 
 export default App;

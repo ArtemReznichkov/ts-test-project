@@ -11,5 +11,5 @@ export default defineConfig({
             constants: '/src/constants',
         },
     },
-    base: '/ts-test-project/',
+    base: '/ts-test-project',
 });
