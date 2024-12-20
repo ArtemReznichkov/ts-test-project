@@ -12,7 +12,7 @@ import CampaignPage from './components/pages/CampaignPage';
 import { EnumRoutes } from './constants/routes';
 
 const App: React.FC = () => (
-    <BrowserRouter basename="/ts-test-project">
+    <BrowserRouter basename="/ts-test-project/">
         <Routes>
             <Route
                 path="*"
